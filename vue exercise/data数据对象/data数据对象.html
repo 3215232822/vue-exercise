@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue exercise</title>
+
+</head>
+<body>
+<div id="app">
+{{message}}
+<h2>{{student.name}} {{student.mobile}}</h2>
+<u1>
+    <li>{{ campus[0] }} </li>
+    <li>{{campus[1]}}</li>
+</u1>
+</div> 
+<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            message:"data!",//渲染到网页的内容
+            student:{
+                name:"郑清文",
+                mobile:"18183934302"
+            },
+        campus:["成都","云南"] 
+    }
+       
+})
+    </script>
+<body>    
+</html>

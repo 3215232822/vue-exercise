@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue exercise</title>
+</head>
+
+<body>
+<div id="app">
+    <h2 v-text="message+'!'">深圳</h2>
+    <h2 v-text="info+'!'">深圳</h2>
+    <h2>{{message+'!'}}部分替换用两个大括号，也可以进行表达式的拼接</h2>>
+</div> 
+<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            message:"好好学习",//渲染到网页的内容
+            info:"前端vue"
+    }
+       
+})
+    </script>
+<body>    
+</html>

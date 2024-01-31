@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind指令</title></v-html></v-html></title>
+</head>
+
+<body>
+    <!--2.html结构-->
+<div id="mask">
+<div class="center">
+    <h2 class="title">
+        <img src="" alt="">
+        雪之下雪乃
+    </h2>
+    <!--图片-->
+    <img src="imgArr[index]" alt=""/>
+    <!--左箭头-->
+    <a href="javascript:void(0)" @click= "prev" class="left">
+        <img src="https://img.tukuppt.com/png_preview/00/20/74/5RJrDvJwoi.jpg!/fw/780" alt=""/>
+    </a>
+    <!--右箭头-->
+    <a href="javascript:void(0)" @click="next" class="right">
+        <img src="https://ts1.cn.mm.bing.net/th/id/R-C.c6bc1b2550ad3012952330fab92171c6?rik=F6%2b0oiNPNOdllA&riu=http%3a%2f%2ficon.chrafz.com%2fuploads%2fallimg%2f160219%2f1-1602191453180-L.png&ehk=mZ1G0uifhwmK8y%2fyRyShWHgD2WsOmKm7b%2f6qtVKKixc%3d&risl=&pid=ImgRaw&r=0" alt=""/>
+    </a>
+    </div>
+</div> 
+<!--1.开发环境版本，包含了有帮助的命令行警告-->
+<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    //3.创建Vue实例
+    var app=new Vue({
+        el:"#mask",
+       data:{
+        imgArr:[
+            "https://ts1.cn.mm.bing.net/th/id/R-C.ef2c5c9ed7aa5d6f09313941f211586a?rik=IutXQ4s%2fSxEATQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20200312s%2f562%2fw1310h852%2f20200312%2f071d-iqrhckn7263817.jpg&ehk=aPBdFLYcjP7k5F419MYXw4KXIVKPzfAOwMNr1WyEy10%3d&risl=&pid=ImgRaw&r=0",
+            "https://n.sinaimg.cn/sinakd10119/496/w1080h1016/20200912/400c-iyywcsz9173580.jpg",
+            "https://n.sinaimg.cn/sinakd10119/496/w1080h1016/20200912/1718-iyywcsz9173638.jpg",
+            "https://ts1.cn.mm.bing.net/th/id/R-C.7dd934df1ee8cff808e823ff29ebb9a3?rik=W7G%2fWR3PGiKhWw&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd10119%2f496%2fw1080h1016%2f20200912%2fff1e-iyywcsz9173785.jpg&ehk=bWp%2bqBe%2b5z808aE73m7ve54FTssnSWj8%2b2v7B5FEEmk%3d&risl=&pid=ImgRaw&r=0",
+            "https://n.sinaimg.cn/sinakd10119/496/w1080h1016/20200912/9413-iyywcsz9174079.jpg",
+        ],
+        index:0
+    },
+       methods:{
+        prev:function(){
+            this.index--;
+        },
+        next:function(){
+            this.index++;
+        }
+       }
+})
+        </script>
+    <body>    
+</html>

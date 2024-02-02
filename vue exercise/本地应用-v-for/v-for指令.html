@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-for指令</title></v-html></v-html></title>
+</head>
+
+<body>
+    <!--2.html结构-->
+<div id="app">
+    <input type="button" value="添加数据"@click="add">
+    <input type="button" value="移除数据"@click="remove"> 
+<ul>
+    <li v-for="(item,index) in arr">
+        {{index+1}}四个发达城市:{{ item }}
+    </li>
+</ul>
+<h2 v-for="it in food" v-bind:title="it.name">
+    {{ it.name }}
+</h2>
+</div> 
+<!--1.开发环境版本，包含了有帮助的命令行警告-->
+<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    //3.创建Vue实例
+    var app=new Vue({
+        el:"#app",
+       data:{
+        arr:["北京","成都","上海","云南"],
+        food:[
+            {name:"北京烤鸭"},
+            {name:"火锅"},
+            {name:"贵"},
+            {name:"过桥米线"}
+        ]
+    },
+    methods:{
+        add:function(){
+            this.food.push({name:"菌子"})      
+        },
+        remove:function(){
+            this.food.shift();
+        }
+    }
+})
+        </script>
+    <body>    
+</html>
